@@ -1,7 +1,7 @@
-let lastName = prompt("Введите Вашу фамилию:"); 
-let firstName = prompt("Введите Ваше имя:"); 
-let patronymic = prompt("Введите Ваше отчество:"); 
+let firstNumber = Number(prompt("Введите первое число: "));
+let secondNumber = Number(prompt("Введите второе число: "));
 
-console.log(lastName); 
-console.log(firstName); 
-console.log(patronymic);
+alert(`${firstNumber} + ${secondNumber} = ${firstNumber + secondNumber}`)
+alert(`${firstNumber} - ${secondNumber} = ${firstNumber - secondNumber}`)
+alert(`${firstNumber} * ${secondNumber} = ${firstNumber * secondNumber}`)
+alert(`${firstNumber} / ${secondNumber} = ${firstNumber / secondNumber}`)
