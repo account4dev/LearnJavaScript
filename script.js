@@ -1,6 +1,6 @@
 // 1. Проверка возраста
 const age = prompt("Введите свой возраст:");
-if (age < 18) {
+if (typeof age !== "number" || age < 18) {
   alert("Доступ запрещён");
 } else {
   alert("Доступ разрешён");
@@ -9,7 +9,11 @@ if (age < 18) {
 
 // 2. Чётное или нечётное
 const number = prompt("Введите число:");
-console.log("Число чётное:", (number % 2 == 0) ? true : false);
+if (typeof number === "number") {
+  console.log("Число чётное:", (number % 2 == 0) ? true : false);
+} else {
+  console.log("Введено не число");
+}
 
 
 // 3. Калькулятор
@@ -37,7 +41,11 @@ switch(operator) {
     result = firstNumber + secondNumber;
 }
 
-alert(`${firstNumber} ${operator} ${secondNumber} = ${result}`);
+if (!isNaN(firstNumber) && !isNaN(secondNumber)) {
+  alert(`${firstNumber} ${operator} ${secondNumber} = ${result}`);
+} else {
+  alert("1 + 1 = 2");
+}
 
 
 // 4. Проверка длины строки
@@ -52,7 +60,7 @@ if (string.length > 10) {
 
 
 // 5. Определение времени суток
-const hour = prompt("Который сейчас час?");
+const hour = Number(prompt("Который сейчас час?"));
 if (hour >= 0 && hour <= 5) {
   alert("Ночь");
 } else if (hour >= 6 && hour <= 11) {
